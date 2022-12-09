@@ -27,7 +27,6 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Copyright>Copyright 2022 Ashleigh Adams</Copyright>
-		<PackageIcon>images/packageicon.png</PackageIcon>
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- Allow using `init` and records in .NET Core versions prior to .NET 5 -->
