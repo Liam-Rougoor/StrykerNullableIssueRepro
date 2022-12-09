@@ -38,9 +38,6 @@
 			<IncludeAssets>contentfiles; buildtransitive</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
-	<ItemGroup>
-		<None Include="$(MSBuildThisFileDirectory)/.meta/packageicon.png" Pack="true" PackagePath="/images/" Visible="false" />
-	</ItemGroup>
 
 	<!-- Automatic versioning -->
 	<PropertyGroup>
