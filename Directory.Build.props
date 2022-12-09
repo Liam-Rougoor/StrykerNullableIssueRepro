@@ -22,11 +22,10 @@
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<AnalysisLevel>5.0</AnalysisLevel>
 		<!-- Meta info -->
-		<Authors>Ashleigh Adams</Authors>
+		<Authors>Liam R</Authors>
 		<RepositoryType>git</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<Copyright>Copyright 2022 Ashleigh Adams</Copyright>
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- Allow using `init` and records in .NET Core versions prior to .NET 5 -->
