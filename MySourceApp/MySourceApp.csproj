@@ -1,9 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-	<TargetFrameworks>netstandard2.1;net6.0;</TargetFrameworks>
+	  <OutputType>Exe</OutputType>
+	<TargetFrameworks>netstandard2.0</TargetFrameworks>
   </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Remove="C:\Users\LiamR\source\repos\StrykerNullableIssueRepro\StrykerNullableIssueRepro\/.meta/BannedSymbols.txt" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Nullable" Version="1.3.0">
