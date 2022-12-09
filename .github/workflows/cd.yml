@@ -1,0 +1,74 @@
+name: CD
+
+on:
+  push:
+    branches:
+    - main
+
+defaults:
+  run:
+    shell: bash
+
+
+jobs:
+  build-and-test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: '0'
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: |
+          3.1.x
+          5.0.x
+          6.x
+          7.x
+
+    - name: Restore
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Test
+      run: dotnet test --configuration Debug
+
+    - name: Pack
+      run: dotnet pack -o artifacts --configuration Release --no-restore
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v2
+      if: success() || failure()
+      with:
+        name: artifacts
+        path: |
+          artifacts/*
+
+  mutation-tests:
+    name: Mutation Test
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: '0'
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: |
+          3.1.x
+          5.0.x
+          6.x
+          7.x
+
+    - name: Mutation Test
+      run: |
+        dotnet tool install --global dotnet-stryker --version 3.2.0
+        cd MyTestProject
+        dotnet stryker --reporter html --reporter progress --log-to-file
+        fi
