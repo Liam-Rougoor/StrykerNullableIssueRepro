@@ -35,7 +35,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
 
     - name: Test
-      run: dotnet test --configuration Debug --logger GitHubActions
+      run: dotnet test --configuration Debug
 
     - name: Pack
       run: dotnet pack -o artifacts --configuration Release --no-restore
