@@ -14,8 +14,6 @@
 		<!-- CA1032: Exceptional exceptions... -->
 		<NoWarn>$(NoWarn);CA1062;CA2225;CA1303;CA2007;CA1032</NoWarn>
 		<RollForward>major</RollForward>
-		<!-- Generate XMLdocs -->
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<!-- Disable system locales -->
 		<InvariantGlobalization>true</InvariantGlobalization>
 		<NeutralLanguage>en</NeutralLanguage>
