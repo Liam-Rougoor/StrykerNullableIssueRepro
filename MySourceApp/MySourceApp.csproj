@@ -4,7 +4,7 @@
 	<TargetFrameworks>netstandard2.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <AdditionalFiles Remove="C:\Users\LiamR\source\repos\StrykerNullableIssueRepro\StrykerNullableIssueRepro\/.meta/BannedSymbols.txt" />
+    <AdditionalFiles Remove="C:/Users/LiamR/source/repos/StrykerNullableIssueRepro/StrykerNullableIssueRepro/.meta/BannedSymbols.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="BannedSymbols.txt" />

@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <AdditionalFiles Remove="C:\Users\LiamR\source\repos\StrykerNullableIssueRepro\StrykerNullableIssueRepro\/.meta/BannedSymbols.txt" />
+    <AdditionalFiles Remove="C:/Users/LiamR/source/repos/StrykerNullableIssueRepro/StrykerNullableIssueRepro/.meta/BannedSymbols.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MySourceApp\MySourceApp.csproj" />
+    <ProjectReference Include="../MySourceApp/MySourceApp.csproj" />
   </ItemGroup>
 
 </Project>
